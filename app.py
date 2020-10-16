@@ -34,7 +34,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     if msg_from_user == 'a':
-        message = "hello world"
+        message = ("hello world")
         line_bot_api.reply_message(event.reply_token, message)
    
 

@@ -35,7 +35,7 @@ def callback():
 def handle_message(event):
     if msg_from_user == 'a':
         message = ("hello world")
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(message)
    
 
 import os

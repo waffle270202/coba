@@ -34,10 +34,10 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg_from_user = event.message.text
-    if msg_from_user == 'hello':
+    if msg_from_user == ("hello"):
         message = TextSendMessage(text=event.message.text)
         line_bot_api.reply_message(event.reply_token, message)
-    elif msg_from_user == 'hello1':
+    elif msg_from_user == ("hello1"):
         break
 
 

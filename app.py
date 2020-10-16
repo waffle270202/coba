@@ -11,7 +11,7 @@ from linebot.models import *
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi(1655100717)
+line_bot_api = LineBotApi(CK3fKdror0leN+B1LCyWJGfnVlDYwW3BBlV6j2BrTr+awlKAszBBYL5iJAwx4i8QubhVdmB0Sa87n7W5m7Cmpq+NeGLBG7nCIaLHBY/3oAiW1VyEwnmQeGTlp4yJkC8dylBJT+4ocPh/hdJlWa3TbgdB04t89/1O/w1cDnyilFU=)
 # Channel Secret
 handler = WebhookHandler(756f280a3c6da1d291aedec5b96c1334)
 

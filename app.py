@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@waffle270202 
+waffle270202
+/
+coba
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+coba/app.py /
+@waffle270202
+waffle270202 Update app.py
+Latest commit b2618dc 21 minutes ago
+ History
+ 1 contributor
+46 lines (39 sloc)  1.32 KB
+  
 from flask import Flask, request, abort
 
 from linebot import (
@@ -33,11 +64,21 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-msg_from_user = event.message.text
-   if msg_from_user == 'a':
-        # Send message to user.
-   else msg_from_user == 'b':
-        # Send another message to user.
+msg = (event.message.text)
+
+if 'hello' in msg:
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="hello Kamu!"))
+elif 'a' in msg:
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="!"))
+else :
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=event.message.text))
+
 
 
 import os
